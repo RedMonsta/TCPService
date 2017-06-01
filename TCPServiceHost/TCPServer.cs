@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using DataModel;
+using CommunicationSerializer;
+using CommandsLib;
+using TCPServiceLib;
 
 namespace TCPServiceHost
 {
@@ -13,11 +17,12 @@ namespace TCPServiceHost
     {
         private TcpListener Server { get; }
         private Thread ThreadWorker { get; set; }
-
+        private CommunicationSerializer.CommunicationSerializer Serializer { get; }
 
         public TCPServer(int port)
         {
             //Server = new TcpListener(GetLocalIPAddress(), port);
+            Serializer = new CommunicationSerializer.CommunicationSerializer();
             Server = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
             Server.Start();
             BeginClientsAccepting();
@@ -76,8 +81,27 @@ namespace TCPServiceHost
                         data += Encoding.UTF8.GetString(buffer, 0, bytesCount);
                     }
 
+                    object response;
+                    Exception exception = null;
+                    var command = Serializer.Deserialize(data);
+
+                    //var handler = Registry.Get(command.GetType());
+
+                    try
+                    {
+                        //response = handler.Execute(command);
+                        var tmpobj = new Object();
+                        response = command.Execute(tmpobj);
+                    }
+                    catch (Exception ex)
+                    {
+                        response = null;
+                        exception = ex;
+                    }
+
+
                     //Здесь нужна обработка данных
-                    
+
                 }
                 catch (Exception e)
                 {

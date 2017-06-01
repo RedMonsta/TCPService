@@ -3,9 +3,9 @@ using DataModel;
 
 namespace TCPServiceLib
 {
-    public class DataSerializer
+    public static class DataSerializer
     {
-        public Data Deserialize(string str)
+        public static Data Deserialize(string str)
         {
             return JsonConvert.DeserializeObject<Data>(str, new JsonSerializerSettings
             {
@@ -13,7 +13,7 @@ namespace TCPServiceLib
             });
         }
 
-        public string Serialize(Data data)
+        public static string Serialize(Data data)
         {
             return JsonConvert.SerializeObject(data, new JsonSerializerSettings
             {

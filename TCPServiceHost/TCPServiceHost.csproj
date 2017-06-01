@@ -53,5 +53,23 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommandsLib\CommandsLib.csproj">
+      <Project>{ec091d67-162c-49f6-8c9a-505e23e8f552}</Project>
+      <Name>CommandsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommunicationSerializer\CommunicationSerializer.csproj">
+      <Project>{72c98d1e-fa50-4b9f-9848-16bcff4a1701}</Project>
+      <Name>CommunicationSerializer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{684cdfc5-b7e7-4d5e-9a7f-c898a5c7daef}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCPServiceLib\TCPServiceLib.csproj">
+      <Project>{99ebd9b4-8408-45ef-bff8-a97250f6979d}</Project>
+      <Name>TCPServiceLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

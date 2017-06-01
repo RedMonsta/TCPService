@@ -1,0 +1,4 @@
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\CommandsLib\bin\Debug\CommandsLib.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\CommandsLib\bin\Debug\CommandsLib.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\CommandsLib\obj\Debug\CommandsLib.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\CommandsLib\obj\Debug\CommandsLib.pdb

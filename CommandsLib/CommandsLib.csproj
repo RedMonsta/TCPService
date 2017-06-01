@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\AddUserCommand.cs" />
-    <Compile Include="ICommand.cs" />
+    <Compile Include="ICustomCommand.cs" />
     <Compile Include="Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿namespace CommandsLib
 {
-    public interface ICommand
+    public interface ICustomCommand
     {
     }
 }
