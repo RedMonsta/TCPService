@@ -16,10 +16,10 @@ namespace TCPServiceHost
 
         public TCPServer(int port)
         {
-            //Server = new TcpListener(GetLocalIPAddress(), port);
+            Server = new TcpListener(GetLocalIPAddress(), port);
+            //Server = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
             Serializer = new CommunicationSerializer.CommunicationSerializer();
-            FillHandlersDictionary();
-            Server = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
+            FillHandlersDictionary();          
             Server.Start();
             BeginClientsAccepting();
             Console.WriteLine("Service started at " + Server.LocalEndpoint);
