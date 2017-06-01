@@ -1,0 +1,7 @@
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\DataModel\bin\Debug\DataModel.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\DataModel\bin\Debug\DataModel.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\DataModel\bin\Debug\Newtonsoft.Json.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\DataModel\bin\Debug\Newtonsoft.Json.xml
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\DataModel\obj\Debug\DataModel.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\DataModel\obj\Debug\DataModel.pdb
