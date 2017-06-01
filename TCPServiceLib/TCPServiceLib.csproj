@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandlersClasses\AddUserCommandHandler.cs" />
+    <Compile Include="CommandHandlersClasses\DefaultCommandHandler.cs" />
+    <Compile Include="CommandHandlersDictionary.cs" />
     <Compile Include="DataSerializer.cs" />
+    <Compile Include="ICustomCommandHandler.cs" />
     <Compile Include="TCPService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommandsLib\CommandsLib.csproj">
+      <Project>{ec091d67-162c-49f6-8c9a-505e23e8f552}</Project>
+      <Name>CommandsLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataModel\DataModel.csproj">
       <Project>{684cdfc5-b7e7-4d5e-9a7f-c898a5c7daef}</Project>
       <Name>DataModel</Name>

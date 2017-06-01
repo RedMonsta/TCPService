@@ -23,6 +23,7 @@ namespace TCPServiceHost
         {
             //Server = new TcpListener(GetLocalIPAddress(), port);
             Serializer = new CommunicationSerializer.CommunicationSerializer();
+            FillHandlersDictionary();
             Server = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
             Server.Start();
             BeginClientsAccepting();
@@ -42,10 +43,15 @@ namespace TCPServiceHost
             throw new Exception("Local IP Address Not Found!");
         }
 
-        private void BeginClientsAccepting()
+        public void BeginClientsAccepting()
         {
             ThreadWorker = new Thread(AcceptClients);
             ThreadWorker.Start();
+        }
+
+        public void EndClientsProcessing()
+        {
+            ThreadWorker.Abort();
         }
 
         private void AcceptClients()
@@ -62,7 +68,7 @@ namespace TCPServiceHost
         {
             var ClientThread = new Thread(ProcessClient);
             ClientThread.Start(handler);
-        }
+        }       
 
         public void ProcessClient(object obj)
         {
@@ -83,15 +89,12 @@ namespace TCPServiceHost
 
                     object response;
                     Exception exception = null;
-                    var command = Serializer.Deserialize(data);
-
-                    //var handler = Registry.Get(command.GetType());
+                    ICustomCommand command = Serializer.Deserialize(data);
+                    ICustomCommandHandler commandHandler = CommandHandlersDictionary.GetHandler(command.GetType());
 
                     try
                     {
-                        //response = handler.Execute(command);
-                        var tmpobj = new Object();
-                        response = command.Execute(tmpobj);
+                        response = commandHandler.Execute(command);
                     }
                     catch (Exception ex)
                     {
@@ -99,8 +102,11 @@ namespace TCPServiceHost
                         exception = ex;
                     }
 
+                    string serializedResponse = Serializer.Serialize(new Response { Value = response, Exception = exception });
+                    byte[] bytesResponse = Encoding.UTF8.GetBytes(serializedResponse);
+                    stream.Write(bytesResponse, 0, bytesResponse.Length);
 
-                    //Здесь нужна обработка данных
+                    Console.WriteLine(client.Client.RemoteEndPoint + " |> " + command.GetType().ToString().Split('.')[1]);
 
                 }
                 catch (Exception e)
@@ -110,6 +116,13 @@ namespace TCPServiceHost
                     break;
                 }
             }
+        }
+
+        private void FillHandlersDictionary()
+        {
+            var service = new TCPService();
+            CommandHandlersDictionary.AddHandler(new AddUserCommand().GetType(), new AddUserCommandHandler(service));
+            CommandHandlersDictionary.SetDefaultHandler(new DefaultCommandHandler(service));
         }
     }
 }

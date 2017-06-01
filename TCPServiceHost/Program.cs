@@ -10,6 +10,10 @@ namespace TCPServiceHost
     {
         static void Main(string[] args)
         {
+            var tcpServer = new TCPServer(17777);
+            Console.ReadKey();
+            tcpServer.EndClientsProcessing();
+            return;
         }
     }
 }

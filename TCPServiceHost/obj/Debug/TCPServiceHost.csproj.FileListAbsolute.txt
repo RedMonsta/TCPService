@@ -1,0 +1,16 @@
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\TCPServiceHost.exe.config
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\TCPServiceHost.exe
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\TCPServiceHost.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\CommandsLib.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\CommunicationSerializer.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\DataModel.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\Newtonsoft.Json.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\TCPServiceLib.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\CommandsLib.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\CommunicationSerializer.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\DataModel.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\TCPServiceLib.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\bin\Debug\Newtonsoft.Json.xml
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\obj\Debug\TCPServiceHost.csprojResolveAssemblyReference.cache
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\obj\Debug\TCPServiceHost.exe
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceHost\obj\Debug\TCPServiceHost.pdb

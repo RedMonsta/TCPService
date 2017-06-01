@@ -1,0 +1,11 @@
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\TCPServiceLib.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\TCPServiceLib.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\CommandsLib.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\DataModel.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\Newtonsoft.Json.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\CommandsLib.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\DataModel.pdb
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\bin\Debug\Newtonsoft.Json.xml
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\obj\Debug\TCPServiceLib.csprojResolveAssemblyReference.cache
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\obj\Debug\TCPServiceLib.dll
+D:\БГУИР\GitHub\GitHubKSiS\Lab3\TCPService\TCPServiceLib\obj\Debug\TCPServiceLib.pdb

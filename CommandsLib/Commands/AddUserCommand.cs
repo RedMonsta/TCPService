@@ -2,6 +2,6 @@
 {
     public class AddUserCommand : ICustomCommand
     {
-        public int UserId { get; set; }
+        public string Name { get; set; }
     }
 }
