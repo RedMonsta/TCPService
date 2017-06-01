@@ -43,9 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandHandlersClasses\AddUserCommandHandler.cs" />
-    <Compile Include="CommandHandlersClasses\DefaultCommandHandler.cs" />
+    <Compile Include="CommandHandlers\AddInstanceHandlers\AddAddressCommandHandler.cs" />
+    <Compile Include="CommandHandlers\AddInstanceHandlers\AddOrderCommandHandler.cs" />
+    <Compile Include="CommandHandlers\AddInstanceHandlers\AddUserCommandHandler.cs" />
+    <Compile Include="CommandHandlers\AddLinkHandlers\AddLinkAddressToUserHandler.cs" />
+    <Compile Include="CommandHandlers\AddLinkHandlers\AddLinkOrderToAddressHandler.cs" />
+    <Compile Include="CommandHandlers\AddLinkHandlers\AddLinkOrderToUserHandler.cs" />
+    <Compile Include="CommandHandlers\AddLinkHandlers\AddLinkUserToAddressHandler.cs" />
+    <Compile Include="CommandHandlers\DefaultCommandHandler.cs" />
+    <Compile Include="CommandHandlers\GetDataCommandHandler.cs" />
+    <Compile Include="CommandHandlers\RemoveInstanceHandlers\RemoveAddressCommandHandler.cs" />
+    <Compile Include="CommandHandlers\RemoveInstanceHandlers\RemoveOrderCommandHandler.cs" />
+    <Compile Include="CommandHandlers\RemoveInstanceHandlers\RemoveUserCommandHandler.cs" />
     <Compile Include="CommandHandlersDictionary.cs" />
+    <Compile Include="CommandHandlers\RemoveLinkHandlers\RemoveLinkAddressToUserHandler.cs" />
+    <Compile Include="CommandHandlers\RemoveLinkHandlers\RemoveLinkOrderToAddressHandler.cs" />
+    <Compile Include="CommandHandlers\RemoveLinkHandlers\RemoveLinkOrderToUserHandler.cs" />
+    <Compile Include="CommandHandlers\RemoveLinkHandlers\RemoveLinkUserToAddressHandler.cs" />
     <Compile Include="DataSerializer.cs" />
     <Compile Include="ICustomCommandHandler.cs" />
     <Compile Include="TCPService.cs" />
@@ -64,5 +78,6 @@
       <Name>DataModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

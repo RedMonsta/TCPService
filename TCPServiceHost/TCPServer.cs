@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using DataModel;
-using CommunicationSerializer;
 using CommandsLib;
 using TCPServiceLib;
 
@@ -27,7 +22,7 @@ namespace TCPServiceHost
             Server = new TcpListener(IPAddress.Parse("127.0.0.1"), port);
             Server.Start();
             BeginClientsAccepting();
-            Console.WriteLine("Server started at " + Server.LocalEndpoint);
+            Console.WriteLine("Service started at " + Server.LocalEndpoint);
         }
 
         private static IPAddress GetLocalIPAddress()
@@ -122,6 +117,25 @@ namespace TCPServiceHost
         {
             var service = new TCPService();
             CommandHandlersDictionary.AddHandler(new AddUserCommand().GetType(), new AddUserCommandHandler(service));
+            CommandHandlersDictionary.AddHandler(new AddAddressCommand().GetType(), new AddAddressCommandHandler(service));
+            CommandHandlersDictionary.AddHandler(new AddOrderCommand().GetType(), new AddOrderCommandHandler(service));
+
+            CommandHandlersDictionary.AddHandler(new RemoveUserCommand().GetType(), new RemoveUserCommandHandler(service));
+            CommandHandlersDictionary.AddHandler(new RemoveAddressCommand().GetType(), new RemoveAddressCommandHandler(service));
+            CommandHandlersDictionary.AddHandler(new RemoveOrderCommand().GetType(), new RemoveOrderCommandHandler(service));
+
+            CommandHandlersDictionary.AddHandler(new AddLinkUserToAddressCommand().GetType(), new AddLinkUserToAddressHandler(service));
+            CommandHandlersDictionary.AddHandler(new AddLinkAddressToUserCommand().GetType(), new AddLinkAddressToUserHandler(service));
+            CommandHandlersDictionary.AddHandler(new AddLinkOrderToAddressCommand().GetType(), new AddLinkOrderToAddressHandler(service));
+            CommandHandlersDictionary.AddHandler(new AddLinkOrderToUserCommand().GetType(), new AddLinkOrderToUserHandler(service));
+
+            CommandHandlersDictionary.AddHandler(new RemoveLinkUserToAddressCommand().GetType(), new RemoveLinkUserToAddressHandler(service));
+            CommandHandlersDictionary.AddHandler(new RemoveLinkAddressToUserCommand().GetType(), new RemoveLinkAddressToUserHandler(service));
+            CommandHandlersDictionary.AddHandler(new RemoveLinkOrderToAddressCommand().GetType(), new RemoveLinkOrderToAddressHandler(service));
+            CommandHandlersDictionary.AddHandler(new RemoveLinkOrderToUserCommand().GetType(), new RemoveLinkOrderToUserHandler(service));
+
+            CommandHandlersDictionary.AddHandler(new GetDataCommand().GetType(), new GetDataCommandHandler(service));
+
             CommandHandlersDictionary.SetDefaultHandler(new DefaultCommandHandler(service));
         }
     }

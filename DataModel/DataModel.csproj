@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Data.cs" />
     <Compile Include="Entities\Address.cs" />
-    <Compile Include="Entities\AUReference.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

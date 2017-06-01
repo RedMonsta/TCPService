@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TCPServiceHost
 {
@@ -13,7 +9,6 @@ namespace TCPServiceHost
             var tcpServer = new TCPServer(17777);
             Console.ReadKey();
             tcpServer.EndClientsProcessing();
-            return;
         }
     }
 }

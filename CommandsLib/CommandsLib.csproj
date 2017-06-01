@@ -40,10 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\AddUserCommand.cs" />
+    <Compile Include="Commands\AddInstanceCommands\AddAddressCommand.cs" />
+    <Compile Include="Commands\AddLinkCommands\AddLinkAddressToUserCommand.cs" />
+    <Compile Include="Commands\AddLinkCommands\AddLinkOrderToAddressCommand.cs" />
+    <Compile Include="Commands\AddLinkCommands\AddLinkOrderToUserCommand.cs" />
+    <Compile Include="Commands\AddLinkCommands\AddLinkUserToAddressCommand.cs" />
+    <Compile Include="Commands\AddInstanceCommands\AddOrderCommand.cs" />
+    <Compile Include="Commands\AddInstanceCommands\AddUserCommand.cs" />
+    <Compile Include="Commands\GetDataCommand.cs" />
+    <Compile Include="Commands\RemoveInstanceCommands\RemoveAddressCommand.cs" />
+    <Compile Include="Commands\RemoveInstanceCommands\RemoveOrderCommand.cs" />
+    <Compile Include="Commands\RemoveInstanceCommands\RemoveUserCommand.cs" />
+    <Compile Include="Commands\RemoveLinkCommands\RemoveLinkAddressToUserCommand.cs" />
+    <Compile Include="Commands\RemoveLinkCommands\RemoveLinkOrderToAddress.cs" />
+    <Compile Include="Commands\RemoveLinkCommands\RemoveLinkOrderToUser.cs" />
+    <Compile Include="Commands\RemoveLinkCommands\RemoveLinkUserToAddressCommand.cs" />
     <Compile Include="ICustomCommand.cs" />
     <Compile Include="Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
